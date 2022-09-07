@@ -99,7 +99,7 @@ resource "aws_instance" "web_instance" {
   #!/bin/bash -ex
 
   sudo apt-get update
-  sudo apt-get install nginx1 -y
+  sudo apt-get install nginx -y
   echo "<h1>$(curl https://api.dev.rest/?format=text)</h1>" >  /usr/share/nginx/html/index.html 
   systemctl enable nginx
   systemctl start nginx
