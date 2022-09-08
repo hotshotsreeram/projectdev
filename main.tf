@@ -103,6 +103,11 @@ resource "aws_instance" "web_instance" {
   echo "<h1>$(curl https://api.dev.rest/?format=text)</h1>" >  /usr/share/nginx/html/index.html 
   systemctl enable nginx
   systemctl start nginx
+  sudo apt-get update
+  sudo apt-get install git
+  git clone https://github.com/hotshotsreeram/projectpractice.git
+  git config --global user.name "hotshotsreeram"
+  git config --global user.email "hotshotsreeram@gmail.com.com"
   EOF
 
   tags = {
