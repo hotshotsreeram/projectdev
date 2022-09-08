@@ -111,6 +111,6 @@ resource "aws_instance" "web_instance" {
   EOF
 
   tags = {
-    "Name" = var.tags
+    "Name" = var.vm_tags
   }
 }
